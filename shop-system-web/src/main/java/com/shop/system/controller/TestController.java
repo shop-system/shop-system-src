@@ -11,6 +11,7 @@ public class TestController {
     public String test(){
 
         System.out.println("dd");
+        System.out.println("可以跑了");
         return "sb";
     }
 }
