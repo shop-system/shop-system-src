@@ -1,0 +1,5 @@
+*.eml
+*.iml
+.idea
+shop-system\target
+shop-system-web\target
