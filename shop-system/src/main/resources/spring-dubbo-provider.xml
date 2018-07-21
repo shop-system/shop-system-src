@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd  
+	http://www.springframework.org/schema/context  
+	http://www.springframework.org/schema/context/spring-context-3.1.xsd  
+	http://www.springframework.org/schema/mvc  
+	http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+	<!--定义了提供方应用信息，用于计算依赖关系；在 dubbo-admin 或 test-provider 会显示这个名字，方便辨识-->
+	<dubbo:application name="test-provider"/>
+	<!--使用 zookeeper 注册中心暴露服务，注意要先开启 zookeeper-->
+	<dubbo:registry  protocol="zookeeper" address="${zookeeperlocation}"/>
+	<!-- 用dubbo协议在20880端口暴露服务 -->
+	<dubbo:protocol name="dubbo" port="${dubboport}"/>
+	<!-- 定义需要暴露的接口, 是接口不是实现类 -->
+	<dubbo:service interface="com.shop.user.service.TestDubbo" ref="testDubbo" timeout="${timeout}"/>
+	<!--具体实现该接口的 impl 实现类-->
+	<bean id="testDubbo" class="com.shop.user.service.impl.TestDubboImpl"/>
+</beans>

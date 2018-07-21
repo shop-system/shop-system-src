@@ -7,6 +7,10 @@
         <groupId>shop.system.parent</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
+
+
+
+
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>shop.system</groupId>
@@ -31,6 +35,16 @@
             <version>0.0.1-SNAPSHOT</version>
             <type>war</type>
         </dependency>
+        <dependency>
+            <groupId>shop.service.usercenter</groupId>
+            <artifactId>shop-service-usercenter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+
+
+
+
     </dependencies>
 
 
