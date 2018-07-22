@@ -19,4 +19,8 @@
 	<dubbo:reference id="testDubbo"
 					 interface="com.shop.user.service.TestDubbo" />
 
+
+	<!-- usercenter start -->
+	<!-- usercenter end -->
+
 </beans>

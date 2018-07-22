@@ -19,4 +19,8 @@
 	<dubbo:service interface="com.shop.user.service.TestDubbo" ref="testDubbo" timeout="${timeout}"/>
 	<!--具体实现该接口的 impl 实现类-->
 	<bean id="testDubbo" class="com.shop.user.service.impl.TestDubboImpl"/>
+
+
+	<!-- usercenter start -->
+	<!-- usercenter end -->
 </beans>
