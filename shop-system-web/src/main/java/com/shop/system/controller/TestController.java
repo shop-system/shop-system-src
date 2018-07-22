@@ -19,10 +19,10 @@ public class TestController {
 
     @RequestMapping("/test")
     public String test(){
-        String str = testDubbo.testDubbo("dubbo 擦");
+        String str = testDubbo.testDubbo("dubbo 你好哦大哥");
         System.out.println("ceshi");
         System.out.println(str);
-        return "/index_test";
+        return "/common/index";
     }
 
     @RequestMapping("/test2")
